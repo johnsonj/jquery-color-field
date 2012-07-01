@@ -20,7 +20,7 @@ $.fn.extend \
       data = $this.data('color-field')
       
       unless data?
-        $this.attr('color-field', true)
+        $this.data('color-field', true)
         $this.addClass(color_field_class, true)
         update_color.call($this)
 

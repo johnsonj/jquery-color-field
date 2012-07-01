@@ -1,21 +1,102 @@
 <!DOCTYPE HTML>
 	<head>
 		<title>jquery.colorfield - simple, intuitive color labeling</title>
-		<link rel="stylesheet" type="text/css" href="jquery.colorfield.css" />
+		<!-- This is just for pretty syntax highlighting -->
+		<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+		<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"> </script>
+		<script type="text/javascript" src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js"> </script>
+		<script type="text/javascript" src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js"> </script>
+
+		<style>	
+			.example-code {
+				width: 700px;
+				margin: 5px 100px 5px 0;
+				border: dashed 1px #DEDEDE;
+				float: right;
+				padding: 0;
+			}
+			.example h2 {
+				border-bottom: dashed 1px #DEDEDE;
+				padding-bottom: 4px;
+			}
+			.example {
+				clear: both;
+				padding-top: 10px;
+			}
+		</style>
+
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"> </script>
+		<!-- Now this is us right here -->
+		<link rel="stylesheet" type="text/css" href="jquery.colorfield.css" />
 		<script src="jquery.colorfield.js"> </script>
+		
 	</head>
 	
 	<body>
-		<h1>Usage</h1>
-		<div class="fieldset">
-			<input id="simple-field" type="text">
-			<input type="hidden" class="color-field-value">
+		<h1>jquery.colorfield</h1>
+		<p>jquery-color-field is a light plugin for intuitive color selection. 
+It's nice to color code stuff, but it should only add to the users experience. <br><br>
+This plugin is an attempt at a sublte method for closing the gap between the entity the color is related to and the selection of that color.
+</p>
+		<div class="example">
+			<div class="example-code">
+				<script type="syntaxhighlighter" class="brush: html "><![CDATA[
+					<div>
+						<input id="simple-field" type="text">
+						<input type="hidden" class="color-field-value">
+					</div>]]></script>	
+					<br>
+				<script type="syntaxhighlighter" class="brush: js">
+					<![CDATA[$('#simple-field').colorfield();]]>
+				</script>	
+			</div>
+			
+			<h2>Simple Example</h2>
+			
+			<div>
+				<input id="simple-field" type="text">
+				<input type="hidden" class="color-field-value">
+			</div>
+			
+			<script>
+				$(function() { 
+					$('#simple-field').colorfield();
+				});
+			</script>
 		</div>
+
+		<div class="example">
+			<div class="example-code">
+				<script type="syntaxhighlighter" class="brush: html "><![CDATA[
+					<div>
+						<input id="preset-field" type="text">
+						<input type="hidden" class="color-field-value" value="rgb(164, 189, 252)">
+					</div>]]></script>	
+					<br>
+				<script type="syntaxhighlighter" class="brush: js">
+					<![CDATA[$('#preset-field').colorfield();]]>
+				</script>	
+			</div>
+			
+			<h2>Preset Value</h2>
+			
+			<div>
+				<input id="preset-field" type="text">
+				<input type="hidden" class="color-field-value" value="rgb(164, 189, 252)">
+			</div>
+			
+			<script>
+				$(function() { 
+					$('#preset-field').colorfield();
+				});
+			</script>
+		</div>
+
+
 	<script>
-		$(function() { 
-			$('#simple-field').colorfield();
-		});
-	</script>
+		$(function() { SyntaxHighlighter.all({toolbar: false}) })
+	</script>	
+	
 	</body>
 </html>

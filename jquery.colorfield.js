@@ -28,7 +28,7 @@
         $this = $(this);
         data = $this.data('color-field');
         if (data == null) {
-          $this.attr('color-field', true);
+          $this.data('color-field', true);
           $this.addClass(color_field_class, true);
           return update_color.call($this);
         }
