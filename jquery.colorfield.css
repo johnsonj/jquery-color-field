@@ -1,0 +1,13 @@
+#color-picker-container {
+  position: absolute; 
+  background-color: white;
+  margin-left: 30px;
+  padding: 0;
+  
+}
+.color-picker-choice {
+  width: 20px;
+  height: 20px;
+  margin: 0 2px 0 2px;
+  display: inline-block;
+}
